@@ -42,12 +42,6 @@ MonoBehaviour:
     - model: {fileID: 8926484042661617036}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661617441}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 0}
-      id: 0
-      isStickyNote: 0
     - model: {fileID: 8926484042661617543}
       id: 0
       isStickyNote: 0
