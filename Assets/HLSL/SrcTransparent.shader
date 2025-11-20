@@ -4,7 +4,8 @@ Shader "HLSL/SrcTransparency"
     {
        _BaseColor("Base Color", Color) = (1,1,1,1)
        _BaseTexture("Base Texture", 2D) = "White"{} // normal map = "Dump"{}
-       _SrcBlend("Sourch Blend", Integer) = 5;
+       [Enum(UnityEngine.Rendering.BlendMode)] _SrcBlend("Source Blend", Integer) = 5
+       [Enum(UnityEngine.Rendering.BlendMode)] _DstBlend("Distance Blend", Integer) = 10
         
     }
     SubShader
@@ -19,7 +20,7 @@ Shader "HLSL/SrcTransparency"
         Pass
         {
             
-            Blend SrcAlpha OneMinusSrcAlpha
+            Blend [_SrcBlend]OneMinusSrcAlpha
             
             HLSLPROGRAM
             #pragma vertex vert
